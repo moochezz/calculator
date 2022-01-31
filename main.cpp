@@ -8,17 +8,9 @@ using namespace std;
 int numcount; 
 int* getnum() //return type- address of integer array
 {
-    string op_str1;
     int op_int;
     int op;
-    if (op == 1)
-    {
-    op_str1 = "add";
-    }
-    if (op == 2)
-    {
-    op_str1 = "subtract";
-    }
+
     cout << "How many numbers would you like?\n";
     cin >> numcount;
     
@@ -34,7 +26,7 @@ int* getnum() //return type- address of integer array
         }
         if (i > 0)
         {
-            cout << "What would you like to " << op_str1 << "?\n";
+            cout << "What is the next number?\n";
             cin >> arr[i];
         }
     }
@@ -139,7 +131,7 @@ int main()
         num = pow(ptr[0], ptr[1]);
     }
     else if(op == 10){
-        
+
     }
 
     cout << "The result is " << num; // finally, prints out the answer
