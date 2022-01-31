@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <cmath> // library used for math function such as square root, cube root, and power
+
+
 using namespace std;
 
 int numcount; 
@@ -21,7 +24,7 @@ int* getnum() //return type- address of integer array
     
     int arr[numcount];
 
-    // for loop that asks the usser which number they would like to use in the operation based on numcount
+    // for loop that asks the user which number they would like to use in the operation based on numcount
     for(int i = 0; i<numcount; i++)
     {
         if (i == 0)
@@ -59,8 +62,7 @@ int main()
             num = num+ptr[i];
         }
     } 
-    
-    if (op == 2) // subtraction
+    else if (op == 2) // subtraction
     {
         for(i = 0; i<numcount; i++)
         {
@@ -80,29 +82,64 @@ int main()
          }
     
     }
-    
-    if (op == 3) // multiplication
-    { 
+    else if (op == 3) // multiplication
+    {
         for(i = 0; i<numcount; i++)
         {
-            num = num*ptr[i];
-        }
-    }
-    if (op == 4) // multiplication
-    { 
-        for(i = 0; i<numcount; i++)
-        {
-            num = num/ptr[i];
-        }
-    }
-    if (op == 5) // multiplication
-    { 
-        for(i = 0; i<numcount; i++)
-        {
-            num = num*num;
-        }
-    }
+
+            if (i == 0)
+            {
+               num = ptr[0]; // checks if this is the first number we're using, and if so, makes that the number variable
+            } 
             
+
+            else
+            {
+            num = num*ptr[i]; // if it isnt the first number, multiply
+            }
+        
+
+         }
     
+    }
+    else if (op == 4) // division
+    {
+        for(i = 0; i<numcount; i++)
+        {
+
+            if (i == 0)
+            {
+               num = ptr[0];
+            } 
+            
+
+            else
+            {
+            num = num/ptr[i];
+            }
+        
+
+         }
+    
+    }
+    else if (op == 5) // squared
+    {
+        num = pow(ptr[0], 2); // the function pow is a part of the "cmath" library, short form for power; the first argument is the base, the second number is the exponent
+    }
+    else if(op == 6){ // cubed
+        num = pow(ptr[0], 3);
+    }
+    else if(op == 7){ // square root
+        num = sqrt(ptr[0]);
+    }
+    else if(op == 8){ // cube root
+        num = cbrt(ptr[0]);
+    }
+    else if(op == 9){
+        num = pow(ptr[0], ptr[1]);
+    }
+    else if(op == 10){
+        
+    }
+
     cout << "The result is " << num; // finally, prints out the answer
-}
