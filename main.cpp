@@ -2,13 +2,11 @@
 #include <string>
 #include <cmath> // library used for math function such as square root, cube root, and power
 
-
 using namespace std;
 
 int numcount; 
 int* getnum() //return type- address of integer array
 {
-    int op_int;
     int op;
 
     cout << "How many numbers would you like?\n";
@@ -48,7 +46,6 @@ int main()
     float l = numArray[2];
     
     
-    
     // now we do the actual math
     if(op == 1) // addition
     { 
@@ -61,38 +58,30 @@ int main()
     {
         for(i = 0; i<numcount; i++)
         {
-
             if (i == 0)
             {
                num = numArray[0]; // checks if this is the first number we're using, and if so, makes that the number variable (we dont wanna subtract from zero)
             } 
-            
 
             else
             {
             num = num-numArray[i]; // if it isnt the first number, simply subtract
             }
-        
-
          }
-    
     }
     else if (op == 3) // multiplication
     {
         for(i = 0; i<numcount; i++)
         {
-
             if (i == 0)
             {
                num = numArray[0]; // checks if this is the first number we're using, and if so, makes that the number variable
             } 
             
-
             else
             {
             num = num*numArray[i]; // if it isnt the first number, multiply
             }
-        
 
          }
     
@@ -107,15 +96,11 @@ int main()
                num = numArray[0];
             } 
             
-
             else
             {
             num = num/numArray[i];
             }
-        
-
          }
-    
     }
     else if (op == 5) // squared
     {
