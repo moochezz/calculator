@@ -6,7 +6,7 @@
 using namespace std;
 
 int numCount; 
-int* getnum() //return type- address of integer array
+int* getnum() // this asterisk basically means that we are returning something called an address, which is an alternate way to access a variable. 
 {
 
     cout << "How many numbers would you like?\n";
