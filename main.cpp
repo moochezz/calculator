@@ -5,17 +5,17 @@
 
 using namespace std;
 
-int numcount; 
+int numCount; 
 int* getnum() //return type- address of integer array
 {
 
     cout << "How many numbers would you like?\n";
-    cin >> numcount;
+    cin >> numCount;
     
-    int arr[numcount];
+    int arr[numCount];
 
-    // for loop that asks the user which number they would like to use in the operation based on numcount
-    for(int i = 0; i<numcount; i++)
+    // for loop that asks the user which number they would like to use in the operation based on numCount
+    for(int i = 0; i<numCount; i++)
     {
         if (i == 0)
         {
@@ -35,7 +35,7 @@ int main()
     cin >> op; // sends the result of the user input to the operation variable
     if (op > 12)
     {
-        cout << "PUT IN EI GDODO VAULE  BROIH >:(";
+        cout << "Please enter a valid operation!";
         return 0;
     }
     int* ptr; //pointer to hold address
@@ -51,14 +51,14 @@ int main()
     // now we do the actual math
     if(op == 1) // addition
     { 
-        for(i = 0; i<numcount; i++)
+        for(i = 0; i<numCount; i++)
         {
             num = num+ptr[i];
         }
     } 
     else if (op == 2) // subtraction
     {
-        for(i = 0; i<numcount; i++)
+        for(i = 0; i<numCount; i++)
         {
 
             if (i == 0)
@@ -78,10 +78,10 @@ int main()
     }
     else if (op == 3) // multiplication
     {
-        for(i = 0; i<numcount; i++)
+        for(i = 0; i<numCount; i++)
         {
 
-            if (i == 0)
+            if (i == 0)C
             {
                num = ptr[0]; // checks if this is the first number we're using, and if so, makes that the number variable
             } 
@@ -98,7 +98,7 @@ int main()
     }
     else if (op == 4) // division
     {
-        for(i = 0; i<numcount; i++)
+        for(i = 0; i<numCount; i++)
         {
 
             if (i == 0)
@@ -129,17 +129,17 @@ int main()
     else if(op == 8){ // cube root
         num = cbrt(ptr[0]);
     }
-    else if(op == 9){
+    else if(op == 9){ // exponent
         num = pow(ptr[0], ptr[1]);
     }
-    else if(op == 10){
+    else if(op == 10){ // SA of rectangular prism
         num = b*h*2+b*l*2+h*l*2;
     }
-    else if(op == 11){
+    else if(op == 11){ // volume of rectangular prism
         num = b*h*l;
     }
-    else if(op == 12){
-        num = (b*b)*h/3;
+    else if(op == 12){ // volume of square pyramid
+        num = b*b*h/3;
     }
         
    
