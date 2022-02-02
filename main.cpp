@@ -30,17 +30,16 @@ int* getnum() // this asterisk basically means that we are returning something c
 int main()
 {   
     int op; // the variable which holds the operation the user would like 
-    int i;
+    int i; // this is the variable that is gonna be used in the for loops when we're doing the actual math
     cout << "\n Welcome to the C++ scientific calculator! What operation would you like to complete (Choose corresponding number)? \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n 5. x^2 (set # of numbers to 1) \n 6. x^3 (set # of numbers to 1) \n 7. sqrt (set # of numbers to 1) \n 8. cbrt (set # of numbers to 1) \n 9. x^y (set # of numbers to 2)\n 10. SA of rect prism (set # of numbers to 3 (number inputs are b, h, & l))\n 11. V of rect prism (set # of numbers to 3 (number inputs are b, h, & l))\n 12. V of Square Pyramid (set # of numbers to 2 (number inputs are b, & h)) \n";
     cin >> op; // sends the result of the user input to the operation variable
-    if (op > 12)
+    if (op > 12) 
     {
         cout << "Please enter a valid operation!";
-        return 0;
+        return 0; // if the operation number selected is greater than 12, terminate the program
     }
-    int* ptr; //pointer to hold address
-    ptr = getnum(); //address of the array
-    // variable that will be used inside of a for loop; will be explained later as to why we're using this
+    int* ptr; //pointer that will point to the array we made that contain the numbers that the user chose.
+    ptr = getnum(); // it now points to what the function returned, which is the address of the array
     float num = 0; // the initial number that will be added to once we start the math
     
     // the following variables will be used for the calculation of the surface area and volumes of prisms
