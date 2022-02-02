@@ -36,8 +36,8 @@ int main()
     if (op > 12)
     {
         cout << "PUT IN EI GDODO VAULE  BROIH >:(";
+        return 0;
     }
-    return 0;
     int* ptr; //pointer to hold address
     ptr = getnum(); //address of the array
     // variable that will be used inside of a for loop; will be explained later as to why we're using this
