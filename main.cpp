@@ -1,11 +1,11 @@
-#include <iostream>
+#include <iostream> 
 #include <string>
 #include <cmath> // library used for math function such as square root, cube root, and power
 
 
 using namespace std;
 
-int numCount; 
+int numCount; // the variable that is gonna be used for how many number the user wants.
 int* getnum() // this asterisk basically means that we are returning something called an address, which is an alternate way to access a variable. 
 {
 
@@ -25,7 +25,7 @@ int* getnum() // this asterisk basically means that we are returning something c
         
     }
     
-    return arr; //returning the address of the array holding the numbers
+    return arr; //returning the address of the array holding the numbers; we use addresses due to c++ not allowing you to return arrays
 }
 int main()
 {   
@@ -42,13 +42,13 @@ int main()
     ptr = getnum(); //address of the array
     // variable that will be used inside of a for loop; will be explained later as to why we're using this
     float num = 0; // the initial number that will be added to once we start the math
+    
+    // the following variables will be used for the calculation of the surface area and volumes of prisms
     float b = ptr[0];
     float h = ptr[1];
     float l = ptr[2];
     
-    
-    
-    // now we do the actual math
+    // now we do the actual math, using if statements and for loops.
     if(op == 1) // addition
     { 
         for(i = 0; i<numCount; i++)
@@ -139,7 +139,7 @@ int main()
         num = b*h*l;
     }
     else if(op == 12){ // volume of square pyramid
-        num = b*b*h/3;
+        num = b*b*h/3; 
     }
         
    
