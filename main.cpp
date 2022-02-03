@@ -80,7 +80,7 @@ int main()
         for(i = 0; i<numCount; i++)
         {
 
-            if (i == 0)C
+            if (i == 0)
             {
                num = ptr[0]; // checks if this is the first number we're using, and if so, makes that the number variable
             } 
